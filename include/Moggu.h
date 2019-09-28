@@ -23,10 +23,11 @@ class Moggu
 
         Moggu& operator=(const Moggu& autre);
 
-        friend std::iostream& operator<<(std::iostream& out, Moggu moggu);
+        friend std::ostream& operator<<(std::ostream& out, Moggu moggu);
 
         void afficherMoggu(void)const ;
 
+        void manger(void);
 
     private:
         /* private data */

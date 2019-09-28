@@ -56,7 +56,7 @@ Moggu& Moggu::operator=(const Moggu& autre){
     return *this;
 }
 
-std::iostream& operator<<(std::iostream& out, Moggu moggu){
+std::ostream& operator<<(std::ostream& out, Moggu moggu){
 
     moggu.afficherMoggu();
 
@@ -75,5 +75,12 @@ void Moggu::afficherMoggu(void)const{
     std::cout << "Vessie : "<< this->vessie << "/100"<<std::endl;
     std::cout << "Energie : " << this->energie << "/100"<< std::endl;
     std::cout << "Fun :" << this->fun << "/100"<< std::endl;
+}
 
+
+void Moggu::manger(void){
+    this->faim +=10;
+    if (this->faim > 100 ){
+        this->faim= 100;
+    }
 }
