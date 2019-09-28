@@ -7,13 +7,14 @@
 #define JOUEUR_HPP
 #include <string>
 #include <iostream>
+#include "Enclos.h"
 
 class Joueur
 {
     public:
 	virtual ~Joueur ();
         Joueur ();
-	Joueur(std::string, int argent, int nourriture);
+	Joueur(std::string, int argent, int nourriture, Enclos enclos);
 	Joueur(const Joueur& joueur);
 	Joueur& operator=(const Joueur& joueur);
 	friend std::ostream& operator<<(std::ostream& os, const Joueur& joueur);
@@ -21,6 +22,7 @@ class Joueur
     private:
 	std::string nom;
 	int argent,nourriture;
+	Enclos enclos;
 
         /* private data */
 };

@@ -1,14 +1,13 @@
 #include <iostream>
 
-#include "Moggu.h"
+#include "Joueur.h"
 
 int main() {
 
-    Moggu pino;
+    Joueur enclos;
 
-    //std::cout << pino << std::endl;
+    std::cout << enclos;
 
-    pino.afficherMoggu();
 
     return EXIT_SUCCESS;
 

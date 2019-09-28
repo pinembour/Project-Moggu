@@ -56,7 +56,7 @@ Moggu& Moggu::operator=(const Moggu& autre){
     return *this;
 }
 
-std::iostream& operator<<(std::iostream& out, Moggu moggu){
+std::ostream& operator<<(std::ostream& out, Moggu moggu){
 
     moggu.afficherMoggu();
 

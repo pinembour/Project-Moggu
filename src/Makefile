@@ -5,16 +5,20 @@ CPPFLAGS=-I../include -Wall -Wextra -Werror
 LDFLAGS=
 LDLIBS=
 
-SRCS=main.cpp server.cpp
+SRCS=main.cpp Moggu.cpp Enclos.cpp Joueur.cpp 
 OBJS=$(subst .cpp,.o,$(SRCS))
-all: server
+all: moggu_oo
 
-server: $(OBJS)
-	$(CXX) $(LDFLAGS) -o server $(OBJS) $(LDLIBS)
+moggu_oo: $(OBJS)
+	$(CXX) $(LDFLAGS) -o moggu_oo $(OBJS) $(LDLIBS)
 
 main.o: main.cpp
 
-server.o: server.cpp
+Enclos.o: Enclos.cpp
+
+Joueur.o: Joueur.cpp
+
+Moggu.o: Moggu.cpp
 
 clean:
 	$(RM) $(OBJS)

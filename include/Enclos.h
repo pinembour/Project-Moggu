@@ -10,19 +10,21 @@
 
 #include <string>
 #include <iostream>
+#include "Moggu.h"
 
 class Enclos
 {
     public:
         Enclos ();
         virtual ~Enclos ();
-	Enclos(int identifiant, int capacite, int decoration, int proprete);
+	Enclos(int identifiant, int capacite, int decoration, int proprete, Moggu moggu);
 	Enclos(const Enclos& joueur);
 	Enclos& operator=(const Enclos& joueur);
 	friend std::ostream& operator<<(std::ostream& os, const Enclos& joueur);
 
     private:
 	int identifiant, capacite, decoration, proprete;
+	Moggu moggu;
 
         /* private data */
 };
