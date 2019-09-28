@@ -27,6 +27,7 @@ class Moggu
 
         void afficherMoggu(void)const ;
 
+        void manger(void);
 
     private:
         /* private data */
