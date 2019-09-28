@@ -27,6 +27,12 @@ class Moggu
 
         void afficherMoggu(void)const ;
 
+
+        void vivre(void);
+
+
+        void avoirFaim(void);
+
         void manger(void);
 
     private:
@@ -37,6 +43,8 @@ class Moggu
         std::string couleur;
         int age;
         float poid;
+
+        int estVivant;
 
         /*-------*/
 

@@ -1,14 +1,19 @@
 #include <iostream>
-
+#include <thread>
 #include "Moggu.h"
 
 int main() {
 
     Moggu pino;
 
-    //std::cout << pino << std::endl;
+    std::cout << pino ;
 
-    pino.afficherMoggu();
+    std::thread th( &Moggu::vivre, pino );
+    th.join();
+
+
+
+    // pino.afficherMoggu();
 
     return EXIT_SUCCESS;
 
