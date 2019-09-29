@@ -27,6 +27,7 @@ class Enclos
 	Moggu moggu;
 
         /* private data */
+	friend class Joueur;
 };
 
 #endif /* end of include guard ENCLOS_HPP */

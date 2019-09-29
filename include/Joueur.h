@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include "Enclos.h"
+#include "Moggu.h"
 
 class Joueur
 {
@@ -18,6 +19,9 @@ class Joueur
 	Joueur(const Joueur& joueur);
 	Joueur& operator=(const Joueur& joueur);
 	friend std::ostream& operator<<(std::ostream& os, const Joueur& joueur);
+	void nourrirMoggu();
+	void acheterNourriture();
+	void nettoyerEnclos();
 
     private:
 	std::string nom;

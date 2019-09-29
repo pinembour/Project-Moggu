@@ -14,7 +14,7 @@ Moggu::Moggu():
     couleur(""),
     age(0),
     poid(1),
-    faim(100),
+    faim(50),
     confort(100),
     vessie(100),
     energie(100),

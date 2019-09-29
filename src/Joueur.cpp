@@ -9,7 +9,7 @@
 #include "Joueur.h"
 #include "Enclos.h"
 
-Joueur::Joueur():nom(),argent(),nourriture(),enclos(){}
+Joueur::Joueur():nom("Test"),argent(100),nourriture(20),enclos(){}
 
 Joueur::~Joueur(){}
 
@@ -35,4 +35,29 @@ std::ostream& operator<<(std::ostream& os, const Joueur& joueur) {
     os << "Nourriture : " << joueur.nourriture << std::endl;
     os << "Enclos : " << joueur.enclos << std::endl;
     return os;
+}
+
+void Joueur::nourrirMoggu(){
+    if (this->nourriture>=10) {
+        this->nourriture-=10;
+	this->enclos.moggu.manger();
+    }
+    else{
+	std::cout << "Vous ne possédez pas assez de nourriture" << std::endl;
+    }
+}
+
+void Joueur::acheterNourriture(){
+    if (this->argent>=10) {
+	this->nourriture += 10;
+	this -> argent -= 10;
+    }
+    else{
+	std::cout << "Vous n'avez pas assez d'argent" << std::endl;
+    }
+}
+
+void Joueur::nettoyerEnclos(){
+    usleep(60000);
+    enclos.proprete=100;
 }

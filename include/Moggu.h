@@ -45,6 +45,8 @@ class Moggu
         int vessie;
         int energie;
         int fun;
+
+    friend class Joueur;
 };
 
 #endif /* end of include guard Moggu_HPP */
